@@ -1,0 +1,13 @@
+body{
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+.dialog{
+    width: 120%;
+}
+.botao{
+    position: absolute;
+    left: VALORpx;
+    bottom: VALORpx
+ }

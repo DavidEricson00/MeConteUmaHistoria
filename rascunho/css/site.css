@@ -1,0 +1,237 @@
+body{
+    margin: 0px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(15, 15, 15, 0.7)), url("../imagens/jk.jpg");
+    padding: 0px; 
+    background-size: 100%;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    background-size: cover;
+    display: block;
+    scale: 100%;
+    align-items: center;
+    background-repeat: no-repeat;
+
+
+
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-image: url(../imagens/madera.webp);
+}
+
+.titulo {
+    text-align: center;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-shadow: white 2px 5px;
+
+
+}
+
+.mapa {
+    display: block;
+    margin-left: auto;
+    padding: 0px;
+    margin: 0%;
+    padding: 0%;
+    width: 96%;
+    height: 96%;
+    -webkit-mask-image:
+  linear-gradient(45deg, #000000 25%, rgba(0,0,0,0.2) 25%),
+  linear-gradient(-45deg, #000000 25%, rgba(0,0,0,0.2) 25%),
+
+-webkit-mask-size: 20px 20px,
+  -webkit-mask-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+}
+
+
+
+.cabe{
+    background-color: rgb(24, 22, 22);
+    height: 200px;
+    box-shadow: thistle 4px 4x 4x;
+
+}
+.container{
+    margin: 0px;
+    width: 100%;
+    height: 1280px;
+    scale: relative;
+    background-repeat: no-repeat;
+    height: 110vh;
+    position:relative;
+    background-size:cover;
+    display: block; 
+}
+
+.boto1{
+
+    cursor: pointer;
+    
+
+}
+
+#centralizar{
+    -cursor: pointer;
+    -position:absolute; 
+    -top:40%;
+    -left:40%;
+    -transform: translate(-50%, -50%);
+    -opacity: 50%;
+    
+}
+#floresta{
+    -cursor: pointer;
+    -top:50%;
+    -left:80%;
+    -position:absolute; 
+    -display: block;
+    
+
+
+
+}
+#farol{
+    -cursor: pointer;
+    -top:40%;
+    -left:32%;
+    -position:absolute;
+
+
+}
+#caverna{
+    cursor: pointer;
+    top: 30%;
+    left:53%;
+    position:absolute;
+    
+
+}
+#cidade{
+    cursor: pointer;
+    top: 62%;
+    left: 9%;
+    position:absolute;
+
+}
+#casa{
+    cursor: pointer;
+    top: 21%;
+    left: 74%;
+    position:absolute;
+    
+
+}
+
+#floresta1{
+    cursor: pointer;
+    top:50%;
+    left:80%;
+    position:absolute; 
+    display: block;
+    width: 100px;
+    height: 100px;
+    opacity: 0%;
+    }
+
+#rio1{
+    cursor: pointer;
+    top:70%;
+    left:32%;
+    position:absolute;
+    width: 100px;
+    height: 100px;
+    opacity: 0%;
+
+}
+#caverna1{
+    cursor: pointer;
+    top: 30%;
+    left:53%;
+    position:absolute;
+    width: 100px;
+    height: 100px;
+    opacity: 0%;
+
+}
+#cidade1{
+    cursor: pointer;
+    width: 110px;
+    height: 100px;
+    opacity: 0%;
+    top:  50%;
+    left: 5%;
+    position:absolute;
+
+}
+#casa1{
+    cursor: pointer;
+    top: 10%;
+    left:20%;
+    position:absolute;
+    width: 200px;
+    height: 199px;
+    opacity: 0%;
+
+}
+#centralizar1{
+    cursor: pointer;
+    position:absolute; 
+    top:40%;
+    left:40%;
+    transform: translate(-50%, -50%);
+    opacity: 0%;
+    width: 100px;
+    height: 100px;
+
+}
+
+@font-face {
+    font-family: "Ink Journal";
+    src: url(../HelpMe.ttf);
+}
+
+    
+    
+    .linha{
+        background-color: black;
+        height: 5px;
+    }
+
+
+
+@font-face {
+    font-family: "friday";
+    src: url(../Friday13SH.otf);
+}
+
+    
+    
+    .linha{
+        background-color: black;
+        height: 5px;
+    }
+
+img#logo {
+    width: 270px;
+    height: 190px;
+    padding: 0%;
+    margin-left: 37%;
+    margin-top: 0.5%;
+}
+
+input#creditu {
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    margin-top: 10%;
+    margin-left: 30%;
+    color: white;
+    background-color: transparent;
+    border-color: transparent;
+}
