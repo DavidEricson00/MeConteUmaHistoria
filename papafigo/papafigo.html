@@ -12,68 +12,68 @@
 <body>
     <div class="story-container">
         <!-- Back to map button -->
-        <button class="btn-map" onclick="window.location.href = '../index.html'" title="Voltar ao mapa"></button>
+        <button class="back-to-map-button" onclick="window.location.href = '../index.html'" title="Voltar ao mapa"></button>
 
         <!-- Scene Background Image -->
-        <img id="scene-img" class="scene-image" src="" alt="Cenário">
+        <img id="scene-image" class="scene-image" src="" alt="Cenário">
 
         <!-- Dialog Box -->
         <div class="dialog-box">
-            <img class="dialog-balloon" src="../assets/images/chat.png" alt="Balão de Diálogo">
+            <img class="dialog-balloon" src="../assets/images/dialog-balloon.png" alt="Balão de Diálogo">
             <p id="dialog-text" class="dialog-text"></p>
-            <button id="btn-next" class="btn-next" title="Avançar diálogo"></button>
+            <button id="next-dialog-button" class="next-dialog-button" title="Avançar diálogo"></button>
         </div>
     </div>
 
     <!-- Scripts -->
     <script src="../assets/js/story.js"></script>
     <script>
-        const storyData = [
-            { text: "*TOC TOC*", image: "1.png" },
-            { text: "...", image: "b.png" },
-            { text: "Ah, olá! O que faz aqui?", image: "3.png" },
-            { text: "Você quer que eu conte uma história?", image: "4.png" },
-            { text: "Hum, ok, tudo bem.", image: "4.png" },
-            { text: "Acho que consigo lembrar de uma ou outra que me contavam nos tempos em que eu era moça...", image: "5.png" },
-            { text: "Eu vivia em uma vila no interior de Pernambuco.", image: "6.png" },
-            { text: "O dia todinho eu e minha irmã trabalhávamos na roça, assim a gente podia brincar de noite.", image: "7.png" },
-            { text: "Mas, sempre que eu saía à noite e voltava muito tarde, meus pais brigavam...", image: "8.png" },
-            { text: "pois eles diziam que um tal de Papa-Figo poderia pegar a gente.", image: "8.png" },
-            { text: "Eu, por ser criança, achava que isso era besteira...", image: "9.png" },
-            { text: "pensei: 'Como pode existir um velho que sai sequestrando crianças e comendo o fígado delas?'", image: "9.png" },
-            { text: "Isso deve ser mentira dos meus pais para que eu acorde mais cedo e tenha de varrer o terreiro junto com minha mãe.", image: "9.png" },
-            { text: "Porém, meu filho, aqui vai uma dica para você:", image: "29.png" },
-            { text: "nunca duvide dos mais velhos...", image: "10.png" },
-            { text: "Era por volta de nove e meia da noite...", image: "11.png" },
-            { text: "eu e minha irmã estávamos sozinhas na rua brincando de bila.", image: "11.png" },
-            { text: "Como era tarde, todos os nossos amigos já tinham ido para casa;", image: "11.png" },
-            { text: "nós já íamos embora, estávamos apenas jogando uma última partida quando, de repente...", image: "11.png" },
-            { text: "...apareceu um velho.", image: "12.png" },
-            { text: "Ele tinha um semblante misterioso e, por algum motivo, estava segurando um saco.", image: "12.png" },
-            { text: "Com uma voz grossa, ele começou a dizer:", image: "12.png" },
-            { text: "\"Olá, crianças. Vocês querem uma bala?\"", image: "13.png" },
-            { text: "Respondemos que sim. Ele continuou:", image: "14.png" },
-            { text: "\"Em troca de um favor, darei balas para vocês, crianças...\"", image: "13.png" },
-            { text: "\"Que tipo de favor, senhor?\"", image: "16.png" },
-            { text: "\"Eu vim aqui para visitar um compadre meu, que mora nesta região, e me adiantei para me confessar com o padre.\"", image: "15.png" },
-            { text: "\"A essa hora?\", perguntou minha irmã.", image: "14.png" },
-            { text: "\"Sim, pequena. Mas infelizmente não conheço muito esta região e não sei onde fica a capela daqui. Podem me levar até lá?\"", image: "20.png" },
-            { text: "\"Posso sim!\", disse minha irmã.", image: "21.png" },
-            { text: "\"Deixa eu só catar as bilas aqui do chão que vamos com o senhor.\"", image: "21.png" },
-            { text: "E então o pior aconteceu...", image: "10.png" },
-            { text: "Quando estávamos na frente da capela...", image: "10.png" },
-            { text: "...o velho nocauteou minha irmã com um pedaço de pau.", image: "25.png" },
-            { text: "E depois me atacou também, acertando apenas meu braço.", image: "26.png" },
-            { text: "Corri chamando ajuda na capela,", image: "27.png" },
-            { text: "mas, quando voltei, a minha irmãzinha não estava mais lá...", image: "28.png" },
-            { text: "Eu fico muito triste quando lembro disso...", image: "29.png" },
-            { text: "e é por isso que eu digo e repito:", image: "30.png" },
-            { text: "nunca duvide dos mais velhos, pois eles sempre têm razão.", image: "30.png" },
-            { text: "Fim...", image: "10.png" }
+        const STORY_SCENES = [
+            { text: "*TOC TOC*", image: "papafigo-scene-01.png" },
+            { text: "...", image: "papafigo-scene-02.png" },
+            { text: "Ah, olá! O que faz aqui?", image: "papafigo-scene-03.png" },
+            { text: "Você quer que eu conte uma história?", image: "papafigo-scene-04.png" },
+            { text: "Hum, ok, tudo bem.", image: "papafigo-scene-04.png" },
+            { text: "Acho que consigo lembrar de uma ou outra que me contavam nos tempos em que eu era moça...", image: "papafigo-scene-05.png" },
+            { text: "Eu vivia em uma vila no interior de Pernambuco.", image: "papafigo-scene-06.png" },
+            { text: "O dia todinho eu e minha irmã trabalhávamos na roça, assim a gente podia brincar de noite.", image: "papafigo-scene-07.png" },
+            { text: "Mas, sempre que eu saía à noite e voltava muito tarde, meus pais brigavam...", image: "papafigo-scene-08.png" },
+            { text: "pois eles diziam que um tal de Papa-Figo poderia pegar a gente.", image: "papafigo-scene-08.png" },
+            { text: "Eu, por ser criança, achava que isso era besteira...", image: "papafigo-scene-09.png" },
+            { text: "pensei: 'Como pode existir um velho que sai sequestrando crianças e comendo o fígado delas?'", image: "papafigo-scene-09.png" },
+            { text: "Isso deve ser mentira dos meus pais para que eu acorde mais cedo e tenha de varrer o terreiro junto com minha mãe.", image: "papafigo-scene-09.png" },
+            { text: "Porém, meu filho, aqui vai uma dica para você:", image: "papafigo-scene-29.png" },
+            { text: "nunca duvide dos mais velhos...", image: "papafigo-scene-10.png" },
+            { text: "Era por volta de nove e meia da noite...", image: "papafigo-scene-11.png" },
+            { text: "eu e minha irmã estávamos sozinhas na rua brincando de bila.", image: "papafigo-scene-11.png" },
+            { text: "Como era tarde, todos os nossos amigos já tinham ido para casa;", image: "papafigo-scene-11.png" },
+            { text: "nós já íamos embora, estávamos apenas jogando uma última partida quando, de repente...", image: "papafigo-scene-11.png" },
+            { text: "...apareceu um velho.", image: "papafigo-scene-12.png" },
+            { text: "Ele tinha um semblante misterioso e, por algum motivo, estava segurando um saco.", image: "papafigo-scene-12.png" },
+            { text: "Com uma voz grossa, ele começou a dizer:", image: "papafigo-scene-12.png" },
+            { text: "\"Olá, crianças. Vocês querem uma bala?\"", image: "papafigo-scene-13.png" },
+            { text: "Respondemos que sim. Ele continuou:", image: "papafigo-scene-14.png" },
+            { text: "\"Em troca de um favor, darei balas para vocês, crianças...\"", image: "papafigo-scene-13.png" },
+            { text: "\"Que tipo de favor, senhor?\"", image: "papafigo-scene-16.png" },
+            { text: "\"Eu vim aqui para visitar um compadre meu, que mora nesta região, e me adiantei para me confessar com o padre.\"", image: "papafigo-scene-15.png" },
+            { text: "\"A essa hora?\", perguntou minha irmã.", image: "papafigo-scene-14.png" },
+            { text: "\"Sim, pequena. Mas infelizmente não conheço muito esta região e não sei onde fica a capela daqui. Podem me levar até lá?\"", image: "papafigo-scene-20.png" },
+            { text: "\"Posso sim!\", disse minha irmã.", image: "papafigo-scene-21.png" },
+            { text: "\"Deixa eu só catar as bilas aqui do chão que vamos com o senhor.\"", image: "papafigo-scene-21.png" },
+            { text: "E então o pior aconteceu...", image: "papafigo-scene-10.png" },
+            { text: "Quando estávamos na frente da capela...", image: "papafigo-scene-10.png" },
+            { text: "...o velho nocauteou minha irmã com um pedaço de pau.", image: "papafigo-scene-25.png" },
+            { text: "E depois me atacou também, acertando apenas meu braço.", image: "papafigo-scene-26.png" },
+            { text: "Corri chamando ajuda na capela,", image: "papafigo-scene-27.png" },
+            { text: "mas, quando voltei, a minha irmãzinha não estava mais lá...", image: "papafigo-scene-28.png" },
+            { text: "Eu fico muito triste quando lembro disso...", image: "papafigo-scene-29.png" },
+            { text: "e é por isso que eu digo e repito:", image: "papafigo-scene-30.png" },
+            { text: "nunca duvide dos mais velhos, pois eles sempre têm razão.", image: "papafigo-scene-30.png" },
+            { text: "Fim...", image: "papafigo-scene-10.png" }
         ];
 
         // Start the story engine
-        initStory(storyData);
+        initStory(STORY_SCENES);
     </script>
 </body>
 

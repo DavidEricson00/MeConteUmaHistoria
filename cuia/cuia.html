@@ -12,50 +12,50 @@
 <body>
     <div class="story-container">
         <!-- Back to map button -->
-        <button class="btn-map" onclick="window.location.href = '../index.html'" title="Voltar ao mapa"></button>
+        <button class="back-to-map-button" onclick="window.location.href = '../index.html'" title="Voltar ao mapa"></button>
 
         <!-- Scene Background Image -->
-        <img id="scene-img" class="scene-image" src="" alt="Cenário">
+        <img id="scene-image" class="scene-image" src="" alt="Cenário">
 
         <!-- Dialog Box -->
         <div class="dialog-box">
-            <img class="dialog-balloon" src="../assets/images/chat.png" alt="Balão de Diálogo">
+            <img class="dialog-balloon" src="../assets/images/dialog-balloon.png" alt="Balão de Diálogo">
             <p id="dialog-text" class="dialog-text"></p>
-            <button id="btn-next" class="btn-next" title="Avançar diálogo"></button>
+            <button id="next-dialog-button" class="next-dialog-button" title="Avançar diálogo"></button>
         </div>
     </div>
 
     <!-- Scripts -->
     <script src="../assets/js/story.js"></script>
     <script>
-        const storyData = [
-            { text: "Se aquieta aí, homi! Vai tanger os peixes!", image: "1.png" },
-            { text: "Oxente, quer ouvir uma história?", image: "2.png" },
-            { text: "Um rei pescador e sabido como eu conhece um bocado de lendas contadas nas minhas pescas.", image: "3.png" },
-            { text: "Enquanto nenhum peixe morder, posso te contar uma para passar o tempo.", image: "4.png" },
-            { text: "Tem uma lenda que me faz não querer pescar em tempo de cheia...", image: "5.png" },
-            { text: "O Cabeça de Cuia", image: "3.png" },
-            { text: "Não ria do nome!", image: "6.png" },
-            { text: "Ele é um bicho que assusta a todos na região em tempo de cheia. Cuidado, viu?", image: "6.png" },
-            { text: "Ele era um moleque teimoso chamado Crispim...", image: "7.png" },
-            { text: "que morava nas margens do rio Parnaíba e tinha uma família pobre.", image: "7.png" },
-            { text: "Só que esse menino se rebelou depois de receber uma sopa de osso porque não tinha carne. Vê se pode!", image: "8.png" },
-            { text: "Aí ele pegou um osso e bateu na mãe...", image: "9.png" },
-            { text: "...que, antes de morrer, lançou uma maldição.", image: "9.png" },
-            { text: "O menino iria viver o resto da vida com uma cabeça enorme em formato de cuia,", image: "10.png" },
-            { text: "que só se libertaria da maldição se devorasse sete virgens com o nome de Maria, o mesmo nome da mãe dele.", image: "10.png" },
-            { text: "O menino enlouqueceu e correu para o rio Parnaíba, onde se afogou.", image: "12.png" },
-            { text: "Ele nunca mais foi visto,", image: "12.png" },
-            { text: "mas há histórias de ele virar embarcações e atacar banhistas no rio.", image: "13.png" },
-            { text: "Gostou da história?", image: "14.png" },
-            { text: "Arre égua! UM PEIXE TÁ PUXANDO!", image: "15.png" },
-            { text: "É dos grandes! Eita bicho pesado!", image: "16.png" },
-            { text: "Se lascar, é outra bota! Homi, homi...", image: "17.png" },
-            { text: "Vai ver é o Cabeça de Cuia colocando as botas no meu anzol, haha!", image: "18.png" }
+        const STORY_SCENES = [
+            { text: "Se aquieta aí, homi! Vai tanger os peixes!", image: "cuia-scene-01.png" },
+            { text: "Oxente, quer ouvir uma história?", image: "cuia-scene-02.png" },
+            { text: "Um rei pescador e sabido como eu conhece um bocado de lendas contadas nas minhas pescas.", image: "cuia-scene-03.png" },
+            { text: "Enquanto nenhum peixe morder, posso te contar uma para passar o tempo.", image: "cuia-scene-04.png" },
+            { text: "Tem uma lenda que me faz não querer pescar em tempo de cheia...", image: "cuia-scene-05.png" },
+            { text: "O Cabeça de Cuia", image: "cuia-scene-03.png" },
+            { text: "Não ria do nome!", image: "cuia-scene-06.png" },
+            { text: "Ele é um bicho que assusta a todos na região em tempo de cheia. Cuidado, viu?", image: "cuia-scene-06.png" },
+            { text: "Ele era um moleque teimoso chamado Crispim...", image: "cuia-scene-07.png" },
+            { text: "que morava nas margens do rio Parnaíba e tinha uma família pobre.", image: "cuia-scene-07.png" },
+            { text: "Só que esse menino se rebelou depois de receber uma sopa de osso porque não tinha carne. Vê se pode!", image: "cuia-scene-08.png" },
+            { text: "Aí ele pegou um osso e bateu na mãe...", image: "cuia-scene-09.png" },
+            { text: "...que, antes de morrer, lançou uma maldição.", image: "cuia-scene-09.png" },
+            { text: "O menino iria viver o resto da vida com uma cabeça enorme em formato de cuia,", image: "cuia-scene-10.png" },
+            { text: "que só se libertaria da maldição se devorasse sete virgens com o nome de Maria, o mesmo nome da mãe dele.", image: "cuia-scene-10.png" },
+            { text: "O menino enlouqueceu e correu para o rio Parnaíba, onde se afogou.", image: "cuia-scene-12.png" },
+            { text: "Ele nunca mais foi visto,", image: "cuia-scene-12.png" },
+            { text: "mas há histórias de ele virar embarcações e atacar banhistas no rio.", image: "cuia-scene-13.png" },
+            { text: "Gostou da história?", image: "cuia-scene-14.png" },
+            { text: "Arre égua! UM PEIXE TÁ PUXANDO!", image: "cuia-scene-15.png" },
+            { text: "É dos grandes! Eita bicho pesado!", image: "cuia-scene-16.png" },
+            { text: "Se lascar, é outra bota! Homi, homi...", image: "cuia-scene-17.png" },
+            { text: "Vai ver é o Cabeça de Cuia colocando as botas no meu anzol, haha!", image: "cuia-scene-18.png" }
         ];
 
         // Start the story engine
-        initStory(storyData);
+        initStory(STORY_SCENES);
     </script>
 </body>
 

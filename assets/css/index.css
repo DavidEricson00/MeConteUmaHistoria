@@ -6,7 +6,7 @@
 body {
     margin: 0px;
     padding: 0px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(15, 15, 15, 0.7)), url("../images/jk.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(15, 15, 15, 0.7)), url("../images/wood-background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
@@ -33,7 +33,7 @@ img#logo {
     height: auto;
 }
 
-.container {
+.map-container {
     position: relative;
     width: 90%;
     max-width: 1200px;
@@ -45,14 +45,14 @@ img#logo {
     background-repeat: no-repeat;
 }
 
-.mapa {
+.map-image {
     width: 100%;
     height: 100%;
     display: block;
     object-fit: fill;
 }
 
-.boto1 {
+.map-hotspots {
     position: absolute;
     top: 0;
     left: 0;
@@ -61,7 +61,7 @@ img#logo {
 }
 
 /* Map Buttons (using absolute positioning to match original locations relative to map container) */
-.map-btn {
+.map-hotspot-button {
     position: absolute;
     cursor: pointer;
     opacity: 0;
@@ -70,26 +70,26 @@ img#logo {
 }
 
 /* Debug style: uncomment if you want to see button areas during development */
-.map-btn {
+.map-hotspot-button {
     opacity: 0.3 !important;
     background: red !important;
 }
 
-#rio1 {
+#cuia-button {
     top: 60%;
     left: 31%;
     width: 12%;
     height: 15%;
 }
 
-#cidade1 {
+#papafigo-button {
     top: 45%;
     left: 4%;
     width: 12%;
     height: 15%;
 }
 
-#casa1 {
+#gloria-button {
     top: 9%;
     left: 17%;
     width: 22%;
@@ -97,19 +97,19 @@ img#logo {
 }
 
 /* Disabled placeholders */
-#floresta1,
-#caverna1 {
+#forest-button,
+#cave-button {
     cursor: not-allowed;
 }
 
-#floresta1 {
+#forest-button {
     top: 45%;
     left: 76%;
     width: 12%;
     height: 15%;
 }
 
-#caverna1 {
+#cave-button {
     top: 25%;
     left: 50%;
     width: 12%;

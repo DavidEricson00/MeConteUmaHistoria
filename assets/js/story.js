@@ -8,16 +8,16 @@ let storyScenes = [];
 
 /**
  * Initializes the story with scenes data.
- * @param {Array<{text: string, image: string, speaker: string}>} scenes 
+ * @param {Array<{text: string, image: string, speaker: string}>} scenesList 
  */
-function initStory(scenes) {
-    storyScenes = scenes;
+function initStory(scenesList) {
+    storyScenes = scenesList;
     currentSceneIndex = 0;
     
     // Bind event listeners
-    const btnNext = document.getElementById('btn-next');
-    if (btnNext) {
-        btnNext.addEventListener('click', nextScene);
+    const nextDialogButton = document.getElementById('next-dialog-button');
+    if (nextDialogButton) {
+        nextDialogButton.addEventListener('click', nextScene);
     }
     
     // Allow spacebar or enter key to advance dialogues
@@ -44,28 +44,28 @@ function renderScene() {
     const scene = storyScenes[currentSceneIndex];
     
     // Update background scene image
-    const sceneImg = document.getElementById('scene-img');
-    if (sceneImg) {
+    const sceneImageElement = document.getElementById('scene-image');
+    if (sceneImageElement) {
         if (scene.image) {
-            sceneImg.src = scene.image;
-            sceneImg.style.display = 'block';
+            sceneImageElement.src = scene.image;
+            sceneImageElement.style.display = 'block';
         } else {
-            sceneImg.src = '';
-            sceneImg.style.display = 'none';
+            sceneImageElement.src = '';
+            sceneImageElement.style.display = 'none';
         }
     }
     
     // Update text and style class styling
-    const dialogText = document.getElementById('dialog-text');
-    if (dialogText) {
-        dialogText.textContent = scene.text;
+    const dialogTextElement = document.getElementById('dialog-text');
+    if (dialogTextElement) {
+        dialogTextElement.textContent = scene.text;
         
         // Clean previous styling classes
-        dialogText.className = 'dialog-text';
+        dialogTextElement.className = 'dialog-text';
         
         // Use custom style/speaker if provided, otherwise default
         const styleClass = scene.style || 'default';
-        dialogText.classList.add(styleClass);
+        dialogTextElement.classList.add(styleClass);
     }
 }
 
