@@ -55,17 +55,17 @@ function renderScene() {
         }
     }
     
-    // Update text and speaker class styling
+    // Update text and style class styling
     const dialogText = document.getElementById('dialog-text');
     if (dialogText) {
         dialogText.textContent = scene.text;
         
-        // Clean previous speaker classes
+        // Clean previous styling classes
         dialogText.className = 'dialog-text';
         
-        if (scene.speaker) {
-            dialogText.classList.add(scene.speaker);
-        }
+        // Use custom style/speaker if provided, otherwise default
+        const styleClass = scene.style || 'default';
+        dialogText.classList.add(styleClass);
     }
 }
 

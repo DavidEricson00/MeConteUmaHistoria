@@ -45,7 +45,7 @@ body {
 
 /* Map Button (top-left) */
 button.btn-map {
-    background-image: url('../images/mundo.gif');
+    background-image: url('../images/next_button.png');
     background-color: transparent;
     background-repeat: no-repeat;
     background-size: cover;
@@ -58,11 +58,12 @@ button.btn-map {
     border: none;
     cursor: pointer;
     z-index: 10;
+    transform: scaleX(-1);
     transition: transform 0.1s ease;
 }
 
 button.btn-map:hover {
-    transform: scale(1.1);
+    transform: scaleX(-1) scale(1.1);
 }
 
 /* Dialog Box Layout */
@@ -86,20 +87,24 @@ button.btn-map:hover {
 
 .dialog-text {
     position: absolute;
-    top: 6%;
+    top: 10%;
     left: 8%;
     right: 12%;
     bottom: 6%;
     margin: 0;
     font-family: 'HelloPumpkin', sans-serif;
-    font-size: 10rem;
-    font-size: clamp(20px, 1.8vw, 30px);
-    line-height: 1.45;
+    line-height: 1.35;
     letter-spacing: 0.5px;
     color: orange;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: purple;
-    line-height: 1.25;
+    text-shadow:
+        -1.5px -1.5px 0 purple,
+        1.5px -1.5px 0 purple,
+        -1.5px 1.5px 0 purple,
+        1.5px 1.5px 0 purple,
+        0px -1.5px 0 purple,
+        0px 1.5px 0 purple,
+        -1.5px 0px 0 purple,
+        1.5px 0px 0 purple;
     overflow-y: auto;
     user-select: none;
     -webkit-user-select: none;
@@ -120,17 +125,13 @@ button.btn-map:hover {
     border-radius: 2px;
 }
 
-.dialog-text.salada {
-    font-size: clamp(18px, 2.5vw, 48px);
-}
-
-.dialog-text.ebaa {
-    font-size: clamp(16px, 2.2vw, 44px);
+.dialog-text.default {
+    font-size: clamp(28px, 2vw, 40px);
 }
 
 /* Shouting effect in Pedra da Glória */
 .dialog-text.shout {
-    font-size: clamp(26px, 3.5vw, 64px);
+    font-size: clamp(35px, 3.2vw, 45px);
 }
 
 /* Next Button inside Dialog Box */
@@ -163,12 +164,12 @@ button.btn-map:hover {
         bottom: 5%;
     }
 
-    .dialog-text.salada {
-        font-size: clamp(14px, 4.5vw, 24px);
+    .dialog-text.default {
+        font-size: clamp(40px, 4.5vw, 50px);
     }
 
-    .dialog-text.ebaa {
-        font-size: clamp(12px, 4vw, 22px);
+    .dialog-text.shout {
+        font-size: clamp(16px, 5vw, 28px);
     }
 
     button.btn-map {
