@@ -1,313 +1,80 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link rel="stylesheet" type="text/css" href="figo.css" media="screen"/>
-    <title>Papa Figo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../assets/css/global.css">
+    <title>Papa-Figo - Tell me a Story</title>
 </head>
+
 <body>
-    <!--abaixo é apresentada divs com função "onclick" para a mudança 
-de texto e imagens. -->
+    <div class="story-container">
+        <!-- Back to map button -->
+        <button class="btn-map" onclick="window.location.href = '../index.html'" title="Voltar ao mapa"></button>
 
-<div style="position:absolute;">
-  <button onclick="window.location.href = '../rascunho/rascunhosite.php'" type="button" class="mapa" name="sasuke"></button>
-</div>
-    
-<div class="position:absolute;">
-    <button class="botao" onclick="this.parentElement.style.display='none';"></button>
-    <img class="chat" src="chat.png">
-    <audio src="pokomn.mp3" autoplay loop></audio>
-  </div>
+        <!-- Scene Background Image -->
+        <img id="scene-img" class="scene-image" src="" alt="Cenário">
 
-    <div style="position:static;">
-      <p class="salada">*TOC TOC*
-      </p>
-      <button class="botao" onclick="this.parentElement.style.display='none';"></button>
-      <img  class="veia" src="1.png">
-  </div>
-  
-    <div style="position:static;">
-    <p class="salada">...</p>
-  <button class="botao" onclick="this.parentElement.style.display='none';"></button>
-      <img class="dialog" src="b.png">
+        <!-- Dialog Box -->
+        <div class="dialog-box">
+            <img class="dialog-balloon" src="../assets/images/chat.png" alt="Balão de Diálogo">
+            <p id="dialog-text" class="dialog-text"></p>
+            <button id="btn-next" class="btn-next" title="Avançar diálogo"></button>
+        </div>
     </div>
-  
-    <div style="position:static;">
-      <p class="salada">Ah olá, o que faz aqui?
-    </p>
-      <button class="botao" onclick="this.parentElement.style.display='none';"></button>
-      <img class="dialog" src="3.png">
-    </div>
-  
-    <div style="position:static;">
-      <p class="salada">Você quer que eu conte uma história?
-    </p>
-      <button class="botao" onclick="this.parentElement.style.display='none';"></button>
-      <img class="dialog" src="4.png">
-  </div>
-  
-  <div style="position:static;">
-      <p class="salada">Hm, ok tudo bem
-    </p>
-      <button class="botao" onclick="this.parentElement.style.display='none';"></button>
-      <img class="dialog" src="4.png">
-  </div>
-  
-  <div style="position:static;">
-      <p class="ebaa">acho que consigo lembrar de uma <br>ou outra que me contavam nos <br>tempos em que eu era moça…
-      </p>
-      <button class="botao" onclick="this.parentElement.style.display='none';"></button>
-      <img class="dialog" src="5.png">
-  </div>
-  
-  <div style="position:static;">
-      <p class="ebaa">Eu vivia em uma vila no interior de Pernambuco,</p>
-      <button class="botao" onclick="this.parentElement.style.display='none';"></button>
-      <img class="dialog" src="6.png">
-  </div>
-  
-  <div style="position:static;">
-      <p class="ebaa">o dia todinho eu e minha irmã trabalhava na roça, assim, a gente <br> podia brincar de noite.</p>
-      <button class="botao" onclick="this.parentElement.style.display='none';"></button>
-      <img class="dialog" src="7.png">
-  </div>
-  
-  <div style="position:static;">
-      <p class="ebaa">Mas sempre que eu saía à noite e voltava muito tarde, meus pais brigavam...
-    </p>
-      <button class="botao" onclick="this.parentElement.style.display='none';"></button>
-      <img class="dialog" src="8.png">
-  </div>
-  
-  <div style="position:static;">
-      <p class="ebaa">Pois eles diziam que um tal de <br>papa-figo poderia pegar a gente.</p>
-      <button class="botao" onclick="this.parentElement.style.display='none';"></button>
-      <img class="dialog" src="8.png">
-  </div>
-  
-  <div style="position:static;" id="id">
-      <p class="ebaa">Eu por ser criança achava que isso <br>era besteira... </p>
-      <button class="botao" onclick="this.parentElement.style.display='none';"></button>
-      <img class="dialog" src="9.png">
-  </div>
-  
-  <div style="position:static;">
-      <p class="ebaa">pensei, como pode existir um velho que sai sequestrando crianças e comendo o fígado delas?</p>
-      <button class="botao" onclick="this.parentElement.style.display='none';"></button>
-      <img class="dialog" src="9.png">
-  </div>
-  
-  <div style="position:static;">
-      <p class="ebaa">Isso deve ser mentira dos meus pais pra que eu acorde mais cedo e tenha de varrer o terreiro junto com minha mãe.
-    </p>
-      <button class="botao" onclick="this.parentElement.style.display='none';"></button>
-      <img class="dialog" src="9.png">
-  </div>
-  
-  <div style="position:static;">
-      <p class="ebaa">Porém meu filho, aqui vai uma dica para você</p>
-      <button class="botao" onclick="this.parentElement.style.display='none';"></button>
-      <img class="dialog" src="29.png">
-  </div>
-  
-  <div style="position:static;">
-      <p class="ebaa">nunca duvide dos mais velhos…</p>
-      <button class="botao" onclick="this.parentElement.style.display='none';"></button>
-      <img class="dialog" src="10.png">
-  </div>
-  
-  <div style="position:static;">
-      <p class="ebaa">Era por volta de nove e meia da noite...</p>
-      <button class="botao" onclick="this.parentElement.style.display='none';"></button>
-      <img class="dialog" src="11.png">
-  </div>
 
-  <div style="position:static;">
-    <p class="ebaa">eu e minha irmã estávamos sozinhas na rua brincando de bila,</p>
-    <button class="botao" onclick="this.parentElement.style.display='none';"></button>
-    <img class="dialog" src="11.png">
-</div>
+    <!-- Scripts -->
+    <script src="../assets/js/story.js"></script>
+    <script>
+        const storyData = [
+            { text: "*TOC TOC*", image: "1.png", speaker: "salada" },
+            { text: "...", image: "b.png", speaker: "salada" },
+            { text: "Ah, olá! O que faz aqui?", image: "3.png", speaker: "salada" },
+            { text: "Você quer que eu conte uma história?", image: "4.png", speaker: "salada" },
+            { text: "Hum, ok, tudo bem.", image: "4.png", speaker: "salada" },
+            { text: "Acho que consigo lembrar de uma ou outra que me contavam nos tempos em que eu era moça...", image: "5.png", speaker: "ebaa" },
+            { text: "Eu vivia em uma vila no interior de Pernambuco.", image: "6.png", speaker: "ebaa" },
+            { text: "O dia todinho eu e minha irmã trabalhávamos na roça, assim a gente podia brincar de noite.", image: "7.png", speaker: "ebaa" },
+            { text: "Mas, sempre que eu saía à noite e voltava muito tarde, meus pais brigavam...", image: "8.png", speaker: "ebaa" },
+            { text: "pois eles diziam que um tal de Papa-Figo poderia pegar a gente.", image: "8.png", speaker: "ebaa" },
+            { text: "Eu, por ser criança, achava que isso era besteira...", image: "9.png", speaker: "ebaa" },
+            { text: "pensei: 'Como pode existir um velho que sai sequestrando crianças e comendo o fígado delas?'", image: "9.png", speaker: "ebaa" },
+            { text: "Isso deve ser mentira dos meus pais para que eu acorde mais cedo e tenha de varrer o terreiro junto com minha mãe.", image: "9.png", speaker: "ebaa" },
+            { text: "Porém, meu filho, aqui vai uma dica para você:", image: "29.png", speaker: "ebaa" },
+            { text: "nunca duvide dos mais velhos...", image: "10.png", speaker: "ebaa" },
+            { text: "Era por volta de nove e meia da noite...", image: "11.png", speaker: "ebaa" },
+            { text: "eu e minha irmã estávamos sozinhas na rua brincando de bila.", image: "11.png", speaker: "ebaa" },
+            { text: "Como era tarde, todos os nossos amigos já tinham ido para casa;", image: "11.png", speaker: "ebaa" },
+            { text: "nós já íamos embora, estávamos apenas jogando uma última partida quando, de repente...", image: "11.png", speaker: "ebaa" },
+            { text: "...apareceu um velho.", image: "12.png", speaker: "ebaa" },
+            { text: "Ele tinha um semblante misterioso e, por algum motivo, estava segurando um saco.", image: "12.png", speaker: "ebaa" },
+            { text: "Com uma voz grossa, ele começou a dizer:", image: "12.png", speaker: "ebaa" },
+            { text: "\"Olá, crianças. Vocês querem uma bala?\"", image: "13.png", speaker: "ebaa" },
+            { text: "Respondemos que sim. Ele continuou:", image: "14.png", speaker: "ebaa" },
+            { text: "\"Em troca de um favor, darei balas para vocês, crianças...\"", image: "13.png", speaker: "ebaa" },
+            { text: "\"Que tipo de favor, senhor?\"", image: "16.png", speaker: "ebaa" },
+            { text: "\"Eu vim aqui para visitar um compadre meu, que mora nesta região, e me adiantei para me confessar com o padre.\"", image: "15.png", speaker: "ebaa" },
+            { text: "\"A essa hora?\", perguntou minha irmã.", image: "14.png", speaker: "ebaa" },
+            { text: "\"Sim, pequena. Mas infelizmente não conheço muito esta região e não sei onde fica a capela daqui. Podem me levar até lá?\"", image: "20.png", speaker: "ebaa" },
+            { text: "\"Posso sim!\", disse minha irmã.", image: "21.png", speaker: "ebaa" },
+            { text: "\"Deixa eu só catar as bilas aqui do chão que vamos com o senhor.\"", image: "21.png", speaker: "ebaa" },
+            { text: "E então o pior aconteceu...", image: "10.png", speaker: "ebaa" },
+            { text: "Quando estávamos na frente da capela...", image: "10.png", speaker: "ebaa" },
+            { text: "...o velho nocauteou minha irmã com um pedaço de pau.", image: "25.png", speaker: "ebaa" },
+            { text: "E depois me atacou também, acertando apenas meu braço.", image: "26.png", speaker: "ebaa" },
+            { text: "Corri chamando ajuda na capela,", image: "27.png", speaker: "ebaa" },
+            { text: "mas, quando voltei, a minha irmãzinha não estava mais lá...", image: "28.png", speaker: "ebaa" },
+            { text: "Eu fico muito triste quando lembro disso...", image: "29.png", speaker: "ebaa" },
+            { text: "e é por isso que eu digo e repito:", image: "30.png", speaker: "ebaa" },
+            { text: "nunca duvide dos mais velhos, pois eles sempre têm razão.", image: "30.png", speaker: "ebaa" },
+            { text: "Fim...", image: "10.png", speaker: "salada" }
+        ];
 
-<div style="position:static;">
-    <p class="ebaa">como era tarde, todos os nossos amigos já tinham ido para casa,</p>
-    <button class="botao" onclick="this.parentElement.style.display='none';"></button>
-    <img class="dialog" src="11.png">
-</div>
-
-<div style="position:static;">
-    <p class="ebaa">nós já íamos embora, estávamos apenas jogando uma última partida, quando de repente, </p>
-    <button class="botao" onclick="this.parentElement.style.display='none';"></button>
-    <img class="dialog" src="11.png">
-</div>
-
-<div style="position:static;">
-    <p class="ebaa">apareceu um velho...</p>
-    <button class="botao" onclick="this.parentElement.style.display='none';"></button>
-    <img class="dialog" src="12.png">
-</div>
-
-<div style="position:static;">
-    <p class="ebaa">ele tinha um semblante misterioso e por algum motivo estava segurando um saco,</p>
-    <button class="botao" onclick="this.parentElement.style.display='none';"></button>
-    <img class="dialog" src="12.png">
-</div>
-
-<div style="position:static;">
-    <p class="ebaa">com uma voz grossa, ele começou a dizer:</p>
-    <button class="botao" onclick="this.parentElement.style.display='none';"></button>
-    <img class="dialog" src="12.png">
-</div>
-
-<div style="position:static;">
-    <p class="ebaa">Olá crianças , vocês querem uma bala?</p>
-    <button class="botao" onclick="this.parentElement.style.display='none';"></button>
-    <img class="dialog" src="13.png">
-</div>
-
-<div style="position:static;">
-    <p class="ebaa">Respondemos que sim, ele <br>continuou.
-    </p>
-    <button class="botao" onclick="this.parentElement.style.display='none';"></button>
-    <img class="dialog" src="14.png">
-</div>
-
-<div style="position:static;">
-    <p class="ebaa">Por troca de um favor, lhe darei <br>balas crianças...
-    </p>
-    <button class="botao" onclick="this.parentElement.style.display='none';"></button>
-    <img class="dialog" src="13.png">
-</div>
-
-<div style="position:static;">
-    <p class="ebaa">Que tipo de favor senhor?
-    </p>
-    <button class="botao" onclick="this.parentElement.style.display='none';"></button>
-    <img class="dialog" src="16.png">
-</div>
-
-<div style="position:static;">
-<p class="ebaa">Eu vim aqui para visitar um caseiro, meu compadre, que mora nessa <br>região e me adiantei pra vir me <br>confessar ao padre.
-
-    </p>
-    <button class="botao" onclick="this.parentElement.style.display='none';"></button>
-    <img class="dialog" src="15.png">
-</div>
-
-<div style="position:static;">
-    <p class="ebaa">A essa hora? perguntou minha irmã.
-    </p>
-    <button class="botao" onclick="this.parentElement.style.display='none';"></button>
-    <img class="dialog" src="14.png">
-</div>
-
-<div style="position:static;">
-    <p class="ebaa">Sim pequena, mas infelizmente não <br>conheço muito essa região, então <br>nem sei onde fica a Capela daqui, <br>podem me levar até lá?
-    </p>
-    <button class="botao" onclick="this.parentElement.style.display='none';"></button>
-    <img class="dialog" src="20.png">
-</div>
-
-<div style="position:static;">
-    <p class="ebaa">Posso sim, disse minha irmã.
-
-    </p>
-    <button class="botao" onclick="this.parentElement.style.display='none';"></button>
-    <img class="dialog" src="21.png">
-</div>
-
-<div style="position:static;">
-    <p class="ebaa">Deixa eu só catar as bila aqui do <br>chão que vamos com o senhor.
-
-    </p>
-    <button class="botao" onclick="this.parentElement.style.display='none';"></button>
-    <img class="dialog" src="21.png">
-</div>
-
-<div style="position:static;">
-    <p class="ebaa">E então o pior aconteceu…
-    </p>
-    <button class="botao" onclick="this.parentElement.style.display='none';"></button>
-    <img class="dialog" src="10.png">
-</div>
-
-<div style="position:static;">
-    <p class="ebaa">Quando estávamos na frente da Capela...
-    </p>
-    <button class="botao" onclick="this.parentElement.style.display='none';"></button>
-    <img class="dialog" src="10.png">
-</div>
-
-<div style="position:static;">
-    <p class="ebaa"> O velho nocauteou minha irmã com um pedaço de pau.
-    </p>
-    <button class="botao" onclick="this.parentElement.style.display='none';"></button>
-    <img class="dialog" src="25.png">
-</div>
-
-<div style="position:static;">
-    <p class="ebaa">e depois me atacou também, acertando apenas meu braço...
-    </p>
-    <button class="botao" onclick="this.parentElement.style.display='none';"></button>
-    <img class="dialog" src="26.png">
-</div>
-
-<div style="position:static;">
-    <p class="ebaa">Corri chamando ajuda na Capela,
-    </p>
-    <button class="botao" onclick="this.parentElement.style.display='none';"></button>
-    <img class="dialog" src="27.png">
-</div>
-
-<div style="position:static;">
-    <p class="ebaa">mas quando eu voltei a minha irmânzinha não estava mais lá...
-    </p>
-    <button class="botao" onclick="this.parentElement.style.display='none';"></button>
-    <img class="dialog" src="28.png">
-</div>
-
-<div style="position:static;">
-    <p class="ebaa">Eu fico muito triste quando lembro disso...
-    </p>
-    <button class="botao" onclick="this.parentElement.style.display='none';"></button>
-    <img class="dialog" src="29.png">
-</div>
-
-<div style="position:static;">
-    <p class="ebaa">e é por isso que eu digo e repito...
-    </p>
-    <button class="botao" onclick="this.parentElement.style.display='none';"></button>
-    <img class="dialog" src="30.png">
-</div>
-
-<div style="position:static;">
-    <p class="ebaa">nunca duvide dos mais velhos pois eles sempre tem razão.
-    </p>
-    <button class="botao" onclick="this.parentElement.style.display='none';"></button>
-    <img class="dialog" src="30.png">
-</div>
-
-<div style="position:static;">
-    <p class="salada">fim...
-    </p>
-    <button class="botao" onclick="window.location.href = '../rascunho/rascunhosite.php';"></button>
-    <img class="dialog" src="10.png">
-</div>
-
-<script>
-    const saida = document.querySelector("p.salada");
-function digitacao(texto, contador){
-
-	if(contador < texto.length){
-		setTimeout(()=>{
-              saida.textContent += texto.charAt(contador);
-			  contador++;
-			  digitacao(texto , contador);
-		} , 90)
-	}
-}
-</script>
-
+        // Start the story engine
+        initStory(storyData);
+    </script>
 </body>
+
 </html>

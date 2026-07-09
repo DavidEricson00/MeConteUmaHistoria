@@ -1,0 +1,178 @@
+@font-face {
+    font-family: 'HelloPumpkin';
+    src: url('../fonts/Hello_Pumpkin.otf') format('opentype');
+}
+
+body {
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    touch-action: manipulation;
+    background-color: #000;
+}
+
+/* Container wrappers */
+.story-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('../images/scrollbar_wood.webp');
+    background-repeat: repeat;
+    overflow: hidden;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.scene-image {
+    max-width: 96vw;
+    max-height: 96vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.85);
+    border: 10px solid #2d1d16;
+    border-radius: 6px;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+/* Map Button (top-left) */
+button.btn-map {
+    background-image: url('../images/mundo.gif');
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 40px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    transition: transform 0.1s ease;
+}
+
+button.btn-map:hover {
+    transform: scale(1.1);
+}
+
+/* Dialog Box Layout */
+.dialog-box {
+    position: fixed;
+    top: 55%;
+    left: 50.9%;
+    width: 50%;
+    aspect-ratio: 2.1 / 1;
+    z-index: 5;
+}
+
+.dialog-balloon {
+    width: 100%;
+    height: auto;
+    opacity: 0.8;
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.dialog-text {
+    position: absolute;
+    top: 6%;
+    left: 8%;
+    right: 12%;
+    bottom: 6%;
+    margin: 0;
+    font-family: 'HelloPumpkin', sans-serif;
+    font-size: 10rem;
+    font-size: clamp(20px, 1.8vw, 30px);
+    line-height: 1.45;
+    letter-spacing: 0.5px;
+    color: orange;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: purple;
+    line-height: 1.25;
+    overflow-y: auto;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    cursor: default;
+    /* Custom scrollbar for text overflow if needed */
+    scrollbar-width: thin;
+    scrollbar-color: purple transparent;
+}
+
+.dialog-text::-webkit-scrollbar {
+    width: 4px;
+}
+
+.dialog-text::-webkit-scrollbar-thumb {
+    background-color: purple;
+    border-radius: 2px;
+}
+
+.dialog-text.salada {
+    font-size: clamp(18px, 2.5vw, 48px);
+}
+
+.dialog-text.ebaa {
+    font-size: clamp(16px, 2.2vw, 44px);
+}
+
+/* Shouting effect in Pedra da Glória */
+.dialog-text.shout {
+    font-size: clamp(26px, 3.5vw, 64px);
+}
+
+/* Next Button inside Dialog Box */
+.btn-next {
+    background-image: url('../images/next_button.png');
+    background-color: transparent;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 55%;
+    left: 84%;
+    width: 12%;
+    aspect-ratio: 1;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.1s ease;
+}
+
+.btn-next:hover {
+    transform: scale(1.1);
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .dialog-box {
+        left: 5%;
+        width: 90%;
+        top: auto;
+        bottom: 5%;
+    }
+
+    .dialog-text.salada {
+        font-size: clamp(14px, 4.5vw, 24px);
+    }
+
+    .dialog-text.ebaa {
+        font-size: clamp(12px, 4vw, 22px);
+    }
+
+    button.btn-map {
+        width: 35px;
+        height: 35px;
+    }
+}
