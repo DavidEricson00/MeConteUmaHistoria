@@ -61,7 +61,3 @@ O projeto é totalmente estático, o que significa que não possui dependências
 ## 💡 Objetivo
 
 O projeto nasceu do desejo de revitalizar a rica cultura oral e folclórica do Brasil. Utilizando um formato interativo e dinâmico, "Me Conte uma História" busca despertar o interesse de crianças e jovens pela mitologia e história regional, promovendo o aprendizado fora do formato convencional de livros de texto.
-
-## 📄 Licença
-
-Este projeto não possui uma licença definida até o momento.
