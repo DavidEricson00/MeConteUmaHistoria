@@ -1,6 +1,6 @@
 # Me Conte uma História
 
-Me Conte uma Históriaé um jogo educativo interativo e visual que apresenta lendas populares do folclore brasileiro de forma lúdica, divertida e acessível para o público infantil.
+Me Conte uma História é um jogo educativo interativo e visual que apresenta lendas populares do folclore brasileiro de forma lúdica, divertida e acessível para o público infantil.
 
 ## 📖 Sobre
 
@@ -54,11 +54,9 @@ O projeto é totalmente estático, o que significa que não possui dependências
 
 ## 🖼️ Capturas de tela
 
-<!-- Adicione aqui uma imagem do mapa -->
-<!-- Exemplo: ![Mapa Interativo](caminho/para/imagem-do-mapa.png) -->
+<img width="1366" height="720" alt="image" src="https://i.imgur.com/D9zIUZr.png" />
 
-<!-- Adicione aqui um GIF mostrando os diálogos -->
-<!-- Exemplo: ![Demonstração da História](caminho/para/gif-dos-dialogos.gif) -->
+<img width="1366" height="720" alt="image" src="https://i.imgur.com/nXiFBYl.png" />
 
 ## 💡 Objetivo
 
