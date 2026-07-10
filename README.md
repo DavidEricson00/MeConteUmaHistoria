@@ -54,9 +54,9 @@ O projeto é totalmente estático, o que significa que não possui dependências
 
 ## 🖼️ Capturas de tela
 
-<img width="1366" height="720" alt="image" src="https://i.imgur.com/D9zIUZr.png" />
+<img alt="image" src="https://i.imgur.com/D9zIUZr.png" />
 
-<img width="1366" height="720" alt="image" src="https://i.imgur.com/nXiFBYl.png" />
+<img alt="image" src="https://i.imgur.com/nXiFBYl.png" />
 
 ## 💡 Objetivo
 
