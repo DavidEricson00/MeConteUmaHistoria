@@ -36,7 +36,7 @@ img#logo {
 
 .map-container {
     position: relative;
-    /* Scale by width normally, but cap width when height is the constraint */
+    /* min() garante que o mapa encolhe por altura em telas portrait, mantendo o aspect ratio */
     width: min(90vw, calc(90vh * 16 / 9));
     max-width: 1200px;
     aspect-ratio: 16 / 9;
@@ -61,7 +61,7 @@ img#logo {
     height: 100%;
 }
 
-/* Map Buttons (using absolute positioning to match original locations relative to map container) */
+
 .map-hotspot-button {
     position: absolute;
     cursor: pointer;
@@ -70,7 +70,7 @@ img#logo {
     transition: opacity 0.2s ease;
 }
 
-/* Debug style: uncomment if you want to see button areas during development */
+/* Descomente para visualizar as áreas clicáveis durante o desenvolvimento */
 /* .map-hotspot-button {
     opacity: 0.3 !important;
     background: red !important;
@@ -97,7 +97,7 @@ img#logo {
     height: 25%;
 }
 
-/* Disabled placeholders */
+/* Histórias não disponíveis nesta versão */
 #forest-button,
 #cave-button {
     cursor: not-allowed;

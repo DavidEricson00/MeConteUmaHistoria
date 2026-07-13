@@ -12,14 +12,11 @@
 
 <body>
     <div class="story-container">
-        <!-- Back to map button -->
         <button class="back-to-map-button" onclick="window.location.href = '../index.html'"
             title="Voltar ao mapa"></button>
 
-        <!-- Scene Background Image -->
         <img id="scene-image" class="scene-image" src="" alt="Cenário">
 
-        <!-- Dialog Box -->
         <div class="dialog-box">
             <img class="dialog-balloon" src="../assets/images/dialog-balloon.png" alt="Balão de Diálogo">
             <p id="dialog-text" class="dialog-text"></p>
@@ -27,7 +24,6 @@
         </div>
     </div>
 
-    <!-- Scripts -->
     <script src="../assets/js/story.js"></script>
     <script>
         const STORY_SCENES = [
@@ -73,7 +69,6 @@
             { text: "nunca duvide dos mais velhos, pois eles sempre têm razão.", image: "papafigo-scene-30.png" },
         ];
 
-        // Start the story engine
         initStory(STORY_SCENES);
     </script>
 </body>

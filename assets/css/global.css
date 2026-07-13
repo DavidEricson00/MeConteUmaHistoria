@@ -13,7 +13,7 @@ body {
     background-color: #000;
 }
 
-/* Container wrappers */
+
 .story-container {
     position: relative;
     width: 100vw;
@@ -43,7 +43,7 @@ body {
     -webkit-user-drag: none;
 }
 
-/* Map Button (top-left) */
+/* Usa a mesma imagem do botão "avançar", mas espelhada horizontalmente via scaleX(-1) */
 button.back-to-map-button {
     background-image: url('../images/next-button.png');
     background-color: transparent;
@@ -66,7 +66,7 @@ button.back-to-map-button:hover {
     transform: scaleX(-1) scale(1.1);
 }
 
-/* Dialog Box Layout */
+
 .dialog-box {
     position: fixed;
     top: 55%;
@@ -111,7 +111,7 @@ button.back-to-map-button:hover {
     -moz-user-select: none;
     -ms-user-select: none;
     cursor: default;
-    /* Custom scrollbar for text overflow if needed */
+
     scrollbar-width: thin;
     scrollbar-color: purple transparent;
 }
@@ -129,12 +129,12 @@ button.back-to-map-button:hover {
     font-size: clamp(28px, 2vw, 40px);
 }
 
-/* Shouting effect in Pedra da Glória */
+/* Usado em cenas de fala alta (ex: Pedra da Glória). Aplicado via scene.style = 'shout' nos dados da história. */
 .dialog-text.shout {
     font-size: clamp(35px, 3.2vw, 45px);
 }
 
-/* Next Button inside Dialog Box */
+
 .next-dialog-button {
     background-image: url('../images/next-button.png');
     background-color: transparent;
@@ -166,14 +166,14 @@ button.back-to-map-button:hover {
         justify-content: flex-start;
         align-items: center;
         overflow: hidden;
-        /* Reserve space at top for the back button */
+        /* Espaço para o botão de voltar ao mapa, que é position: absolute */
         padding-top: 60px;
         box-sizing: border-box;
         gap: 0;
     }
 
     .scene-image {
-        /* Image takes the upper portion of the screen */
+
         flex: 0 0 auto;
         max-width: 92vw;
         max-height: 48vh;
@@ -186,14 +186,12 @@ button.back-to-map-button:hover {
     }
 
     .dialog-box {
-        /* Flow naturally below the image instead of being fixed/absolute */
+        /* position: relative para sair do fluxo fixed do desktop e empilhar abaixo da imagem */
         position: relative;
         top: auto;
         left: auto;
-        /* Fill most of the available width */
         width: 92vw;
         max-width: 480px;
-        /* Let the aspect-ratio drive height, but cap it */
         aspect-ratio: 2.1 / 1;
         max-height: 35vh;
         z-index: 5;
