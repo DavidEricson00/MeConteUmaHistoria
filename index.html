@@ -34,6 +34,97 @@
                 title="Cachoeira (Pedra da Glória)"></button>
         </div>
     </div>
+
+    <button id="info-btn" class="info-btn" title="Informações sobre o jogo">?</button>
+
+    <!-- Modal de Informações -->
+    <div id="info-modal-overlay" class="modal-overlay">
+        <div class="modal-container">
+            <button id="modal-close-btn" class="modal-close-btn" aria-label="Fechar modal">&times;</button>
+
+            <div class="modal-content">
+                <h2 class="modal-title">Informações</h2>
+
+                <section>
+                    <h3>Sobre</h3>
+                    <p>Me Conte uma História é um jogo educativo interativo que apresenta lendas do folclore brasileiro
+                        de forma ilustrada.</p>
+                    <p>Explore o mapa, descubra diferentes histórias e conheça um pouco mais da cultura popular
+                        brasileira de maneira divertida e acessível.</p>
+                </section>
+
+                <section>
+                    <h3>Como jogar</h3>
+                    <ul>
+                        <li>Explore livremente o mapa.</li>
+                        <li>Passe o mouse (ou toque na tela, no celular) em diferentes regiões do mapa.</li>
+                        <li>Quando o cursor mudar para uma mãozinha indicando um elemento clicável, selecione aquele
+                            ponto.</li>
+                        <li>Cada ponto leva a uma lenda diferente.</li>
+                        <li>Parte da experiência é descobrir onde cada história está escondida no mapa.</li>
+                    </ul>
+
+                    <div class="image-placeholder-1-1">
+                        <img src="assets/images/como-jogar-ilustracao.png" alt="Ilustração explicativa de como jogar" />
+                    </div>
+                </section>
+
+                <section>
+                    <h3>Créditos</h3>
+                    <p>Desenvolvido por:</p>
+                    <ul>
+                        <li><a href="https://github.com/lightpotat0" target="_blank" rel="noopener noreferrer">
+                                Danillo Silva
+                            </a></li>
+                        <li><a href="https://github.com/DavidEricson00" target="_blank" re l="noopener noreferrer">
+                                David Ericson
+                            </a></li>
+                        <li>George Wilson</li>
+                    </ul>
+                </section>
+            </div>
+
+            <div class="modal-footer">
+                <button id="modal-back-btn" class="modal-back-btn">Voltar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts do Modal de Informações -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const infoBtn = document.getElementById('info-btn');
+            const modalOverlay = document.getElementById('info-modal-overlay');
+            const closeBtn = document.getElementById('modal-close-btn');
+            const backBtn = document.getElementById('modal-back-btn');
+
+            const openModal = () => {
+                modalOverlay.classList.add('active');
+                document.body.classList.add('modal-open');
+            };
+
+            const closeModal = () => {
+                modalOverlay.classList.remove('active');
+                document.body.classList.remove('modal-open');
+            };
+
+            infoBtn.addEventListener('click', openModal);
+            closeBtn.addEventListener('click', closeModal);
+            backBtn.addEventListener('click', closeModal);
+
+            modalOverlay.addEventListener('click', (event) => {
+                if (event.target === modalOverlay) {
+                    closeModal();
+                }
+            });
+
+            document.addEventListener('keydown', (event) => {
+                if (event.key === 'Escape' && modalOverlay.classList.contains('active')) {
+                    closeModal();
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
