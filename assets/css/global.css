@@ -90,7 +90,7 @@ button.back-to-map-button:hover {
     top: 10%;
     left: 8%;
     right: 12%;
-    bottom: 6%;
+    bottom: 40%;
     margin: 0;
     font-family: 'HelloPumpkin', sans-serif;
     line-height: 1.35;
@@ -155,25 +155,120 @@ button.back-to-map-button:hover {
     transform: scale(1.1);
 }
 
-/* Mobile adjustments */
-@media (max-width: 768px) {
+/* ─── Mobile: Portrait (image top, dialog bottom, stacked) ─── */
+@media (max-width: 1023px) and (orientation: portrait) {
+    body {
+        overflow: hidden;
+    }
+
+    .story-container {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        overflow: hidden;
+        /* Reserve space at top for the back button */
+        padding-top: 60px;
+        box-sizing: border-box;
+        gap: 0;
+    }
+
+    .scene-image {
+        /* Image takes the upper portion of the screen */
+        flex: 0 0 auto;
+        max-width: 92vw;
+        max-height: 48vh;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+        border: 6px solid #2d1d16;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.75);
+        margin-bottom: 8px;
+    }
+
     .dialog-box {
-        left: 5%;
-        width: 90%;
+        /* Flow naturally below the image instead of being fixed/absolute */
+        position: relative;
         top: auto;
-        bottom: 5%;
+        left: auto;
+        /* Fill most of the available width */
+        width: 92vw;
+        max-width: 480px;
+        /* Let the aspect-ratio drive height, but cap it */
+        aspect-ratio: 2.1 / 1;
+        max-height: 35vh;
+        z-index: 5;
+        flex: 0 0 auto;
+        margin: 0 auto;
     }
 
     .dialog-text.default {
-        font-size: clamp(40px, 4.5vw, 50px);
+        font-size: clamp(12px, 3.5vw, 18px);
     }
 
     .dialog-text.shout {
-        font-size: clamp(16px, 5vw, 28px);
+        font-size: clamp(14px, 4.5vw, 22px);
     }
 
     button.back-to-map-button {
-        width: 35px;
-        height: 35px;
+        top: 12px;
+        left: 12px;
+        width: 34px;
+        height: 34px;
+    }
+}
+
+/* ─── Mobile: Landscape (image left, dialog right, side by side) ─── */
+@media (max-width: 1023px) and (orientation: landscape) {
+    body {
+        overflow: hidden;
+    }
+
+    .story-container {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        padding: 50px 16px 12px 16px;
+        box-sizing: border-box;
+        gap: 16px;
+    }
+
+    .scene-image {
+        flex: 0 1 auto;
+        max-width: 44vw;
+        max-height: 80vh;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+        border: 6px solid #2d1d16;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.75);
+    }
+
+    .dialog-box {
+        position: relative;
+        top: auto;
+        left: auto;
+        flex: 0 1 auto;
+        width: 44vw;
+        max-width: 400px;
+        aspect-ratio: 2.1 / 1;
+        max-height: 40vh;
+        z-index: 5;
+        margin: 0;
+    }
+
+    .dialog-text.default {
+        font-size: clamp(20px, 2.2vw, 25px);
+    }
+
+    .dialog-text.shout {
+        font-size: clamp(25px, 2.8vw, 33px);
+    }
+
+    button.back-to-map-button {
+        top: 10px;
+        left: 10px;
+        width: 30px;
+        height: 30px;
     }
 }

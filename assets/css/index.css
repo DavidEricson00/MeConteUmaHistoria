@@ -1,11 +1,11 @@
 @font-face {
     font-family: "HelloPumpkin";
-    src: url("../fonts/Hello_Pumpkin.otf") format("opentype");
+    src: url("../fonts/hello-pumpkin.otf") format("opentype");
 }
 
 body {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(15, 15, 15, 0.7)), url("../images/wood-background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -15,7 +15,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow-x: hidden;
+    justify-content: center;
+    overflow: hidden;
 }
 
 header {
@@ -35,9 +36,9 @@ img#logo {
 
 .map-container {
     position: relative;
-    width: 90%;
+    /* Scale by width normally, but cap width when height is the constraint */
+    width: min(90vw, calc(90vh * 16 / 9));
     max-width: 1200px;
-    margin: 20px auto;
     aspect-ratio: 16 / 9;
     /* border: 3px solid #261c21; */
     /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); */
